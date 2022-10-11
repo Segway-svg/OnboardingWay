@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "5B1UfWUFoWD+NZU5z6zSbrL3dQSSG/4kuT+ItZcu/foXagSeNcNhkPqiS068gV5gue4bbggZtdJ7xbm3AE/9iQ==",
+  "dgSpecHash": "6c0kuzovvU076l8kwsbU16RK/DoZdymwWjHnx+F47mSN/Oozva00enmLtQcgspYG0izLMuqeo4qAM9kuaByudQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\tukat\\repos\\OnboardingWay\\OnboardingWay\\OnboardingWay.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\tukat\\.nuget\\packages\\kysect.mazegenerator\\1.0.1\\kysect.mazegenerator.1.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
