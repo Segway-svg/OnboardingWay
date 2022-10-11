@@ -1,0 +1,17 @@
+C:\Users\tukat\repos\OnboardingWay\OnboardingWay\bin\Debug\net6.0\OnboardingWay.exe
+C:\Users\tukat\repos\OnboardingWay\OnboardingWay\bin\Debug\net6.0\OnboardingWay.deps.json
+C:\Users\tukat\repos\OnboardingWay\OnboardingWay\bin\Debug\net6.0\OnboardingWay.runtimeconfig.json
+C:\Users\tukat\repos\OnboardingWay\OnboardingWay\bin\Debug\net6.0\OnboardingWay.dll
+C:\Users\tukat\repos\OnboardingWay\OnboardingWay\bin\Debug\net6.0\OnboardingWay.pdb
+C:\Users\tukat\repos\OnboardingWay\OnboardingWay\bin\Debug\net6.0\Kysect.MazeGenerator.dll
+C:\Users\tukat\repos\OnboardingWay\OnboardingWay\obj\Debug\net6.0\OnboardingWay.csproj.AssemblyReference.cache
+C:\Users\tukat\repos\OnboardingWay\OnboardingWay\obj\Debug\net6.0\OnboardingWay.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tukat\repos\OnboardingWay\OnboardingWay\obj\Debug\net6.0\OnboardingWay.AssemblyInfoInputs.cache
+C:\Users\tukat\repos\OnboardingWay\OnboardingWay\obj\Debug\net6.0\OnboardingWay.AssemblyInfo.cs
+C:\Users\tukat\repos\OnboardingWay\OnboardingWay\obj\Debug\net6.0\OnboardingWay.csproj.CoreCompileInputs.cache
+C:\Users\tukat\repos\OnboardingWay\OnboardingWay\obj\Debug\net6.0\OnboardingWay.csproj.CopyComplete
+C:\Users\tukat\repos\OnboardingWay\OnboardingWay\obj\Debug\net6.0\OnboardingWay.dll
+C:\Users\tukat\repos\OnboardingWay\OnboardingWay\obj\Debug\net6.0\refint\OnboardingWay.dll
+C:\Users\tukat\repos\OnboardingWay\OnboardingWay\obj\Debug\net6.0\OnboardingWay.pdb
+C:\Users\tukat\repos\OnboardingWay\OnboardingWay\obj\Debug\net6.0\OnboardingWay.genruntimeconfig.cache
+C:\Users\tukat\repos\OnboardingWay\OnboardingWay\obj\Debug\net6.0\ref\OnboardingWay.dll
