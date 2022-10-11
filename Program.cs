@@ -1,5 +1,6 @@
 ﻿using Kysect.MazeGenerator;
 using Kysect.MazeGenerator.MazeGenerators.GrowingTree;
+using OnboardingWay;
 
 public class Program
 {
@@ -10,26 +11,10 @@ public class Program
         var maze = new Maze(generator.Generate(size));
         maze.AddExit();
 
-        for (int i = 0; i < maze.Size; i++)
-        {
-            for (int j = 0; j < maze.Size; j++)
-            {
-                Console.Write(CellToString(maze.Map[i][j]));
+        ObjectInstallation objectInstallation = new ObjectInstallation(maze, 5); 
+        Coordinate objectCoordinate = objectInstallation.LocateObject();
 
-                Console.Write(" ");
-            }
-            Console.WriteLine();
-        }
-
-        string CellToString(Cells cellType)
-        {
-            return cellType switch
-            {
-                Cells.Wall => "0",
-                Cells.Empty => " ",
-                Cells.Exit => "#",
-                _ => throw new ArgumentOutOfRangeException(nameof(cellType), cellType, null)
-            };
-        }
+        MazePrinter mazePrinter = new MazePrinter(maze, objectCoordinate);
+        mazePrinter.PrintMaze();
     }
 }
