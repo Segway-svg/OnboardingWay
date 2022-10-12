@@ -1,11 +1,36 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Kysect.MazeGenerator/1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Kysect.MazeGenerator.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Kysect.MazeGenerator.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Kysect.MazeGenerator/1.0.1": {
+      "sha512": "oym6PfDkD1MN4fdu0kKiVTrv63+Cz7UI8ASDls6/T79zzA2ZT4NlXHxZUpE7c9a+eVnUud7F0loDLpkwh0DqVw==",
+      "type": "package",
+      "path": "kysect.mazegenerator/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "kysect.mazegenerator.1.0.1.nupkg.sha512",
+        "kysect.mazegenerator.nuspec",
+        "lib/net6.0/Kysect.MazeGenerator.dll"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Kysect.MazeGenerator >= 1.0.1"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\tukat\\.nuget\\packages\\": {}
@@ -46,6 +71,12 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
+        "dependencies": {
+          "Kysect.MazeGenerator": {
+            "target": "Package",
+            "version": "[1.0.1, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
