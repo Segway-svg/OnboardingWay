@@ -5,25 +5,27 @@ namespace OnboardingWay
 {
     public class ObjectInstallation
     {
-        private Coordinate _exitCoordinate;
+        private readonly int _minimumDistance;
         private static Random rand;
         private readonly Maze _maze;
-        private readonly int _minimumDistance;
+        private readonly ExitFinder _exitFinder;
 
         public ObjectInstallation(Maze maze, int minimumDistance)
         {
             rand = new Random();
+            _minimumDistance = minimumDistance; 
             _maze = maze;
-            _minimumDistance = minimumDistance;
+            _exitFinder = new ExitFinder(maze);
         }
 
         public Coordinate LocateObject()
         {
-            FindExit();
+            if (_minimumDistance < 1)
+                throw new ArgumentException($"{nameof(_minimumDistance)} must be greater than 0");
 
             List<Coordinate> freeCells = new List<Coordinate>();
 
-            if (_exitCoordinate.X == 0)
+            if (_exitFinder.ExitCoordinate.X == 0)
             {
                 for (int i = 0 + _minimumDistance; i < _maze.Map.Length - 1; i++)
                 {
@@ -37,7 +39,7 @@ namespace OnboardingWay
                 }
             }
 
-            if (_exitCoordinate.X == _maze.Map.Length - 1)
+            else if (_exitFinder.ExitCoordinate.X == _maze.Map.Length - 1)
             {
                 for (int i = _maze.Map.Length - _minimumDistance - 1; i > 0; i--)
                 {
@@ -51,7 +53,7 @@ namespace OnboardingWay
                 }
             }
 
-            if (_exitCoordinate.Y == 0)
+            else if (_exitFinder.ExitCoordinate.Y == 0)
             {
                 for (int i = 1; i < _maze.Map.Length - 1; i++)
                 {
@@ -65,7 +67,7 @@ namespace OnboardingWay
                 }
             }
 
-            if (_exitCoordinate.Y == _maze.Map.Length - 1)
+            else if (_exitFinder.ExitCoordinate.Y == _maze.Map.Length - 1)
             {
                 for (int i = 1; i < _maze.Map.Length - 1; i++)
                 {
@@ -80,20 +82,6 @@ namespace OnboardingWay
             }
             
             return freeCells[rand.Next(0, freeCells.Count)];
-        }
-
-        private void FindExit()
-        {
-            for (int i = 0; i < _maze.Size; i++)
-            {
-                for (int j = 0; j < _maze.Size; j++)
-                {
-                    if (_maze.Map[i][j] == Cells.Exit)
-                    {
-                        _exitCoordinate = new Coordinate(i, j);
-                    }
-                }
-            }
         }
     }
 }

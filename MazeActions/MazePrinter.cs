@@ -8,6 +8,11 @@ namespace OnboardingWay
         private readonly Maze _maze;
         private readonly Coordinate _objectCoordinate;
 
+        public MazePrinter(Maze maze)
+        {
+            _maze = maze;
+        }
+
         public MazePrinter(Maze maze, Coordinate objectCoordinate)
         {
             _maze = maze;
@@ -20,7 +25,7 @@ namespace OnboardingWay
             {
                 for (int j = 0; j < _maze.Size; j++)
                 {
-                    if (i == _objectCoordinate.X && j == _objectCoordinate.Y)
+                    if (i == _objectCoordinate.X && j == _objectCoordinate.Y && i != 0 && j != 0)
                     {
                         Console.Write("o");
                     }
@@ -28,7 +33,6 @@ namespace OnboardingWay
                     {
                         Console.Write(CellToString(_maze.Map[i][j]));
                     }
-
                     Console.Write(" ");
                 }
 
@@ -36,7 +40,7 @@ namespace OnboardingWay
             }
         }
 
-        public string CellToString(Cells cellType)
+        private string CellToString(Cells cellType)
         {
             return cellType switch
             {
